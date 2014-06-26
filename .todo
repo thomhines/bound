@@ -1,0 +1,58 @@
+TODO
+-------------------------------------------------------
+- handlebar {{ varname }} notation
+- use an array of jQuery objects for data set loops INSTEAD of reloading all foreach container elements
+	model = $(this).html().clone();
+	// create new clones of model and save these new jQuery objects to an array (model_copies)
+	// each time a bound property is changed, update only the model that was affected
+	// for example, bound.todos[2].name = 'Bob':
+	// update {{name}} or data-val="name" inside model_copies[2]
+
+- look for specific changes inside properties (eg. if bound.todos[2].name is set to 'Bob', don't change all of bound.todos loop)
+	- BUT look for changes on multiple levels of objects 
+		(eg. if bound.todos.subtasks.items[3].name is changed, look for elements where data-foreach="bound.todos", "bound.todos.subtasks", "bound.todos.subtasks.items", etc.)
+
+
+
+
+
+
+
+DONE
+-------------------------------------------------------
+- bind inputs to variables
+- bind element content to variables
+- loop through array/object values (for each)
+
+
+
+
+
+RESOURCES
+-------------------------------------------------------
+(Good example on how to trigger bindings on things like arr.concat, arr.push, etc.)[http://techblog.personalcapital.com/2013/02/js-hacks-dead-simple-javascript-variable-change-watchers/]
+http://www.bennadel.com/blog/1520-binding-events-to-non-dom-objects-with-jquery.htm
+http://www.lucaongaro.eu/blog/2012/12/02/easy-two-way-data-binding-in-javascript/
+http://emberjs.com/
+http://knockoutjs.com/
+
+
+
+
+
+
+
+#### Possible Bound solution
+
+
+Look for any changes to bound getter or setter, then 
+
+BoundCopy = bound.clone;
+SetterInterval = setinterval(updateElements, 10, boundCopy);
+
+
+Overwrite interval with each pass of getter or setter
+
+UpdateElements() updates all HTML elements based on the clone of bound
+
+How do I prevent cloning of bound causing bound getter function from running again?
