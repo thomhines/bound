@@ -9,11 +9,43 @@
 <link rel="shortcut icon" href="favicon.ico" />
 
 <link rel="Stylesheet" href="/cinch-0.7/?files=/bound/css/style.scss" type="text/css" media="all" />
-<script src="/cinch-0.7/?files=[jquery],/bound/js/bound3.5.js"></script>
+<script src="/cinch-0.7/?files=[jquery],/bound/js/bound-handlebars.js&min=0"></script>
 
 </head>
 
-<body>
+<body class="body">
+
+	
+	
+	<div class="test">
+		<h3>{{name}}!!!</h3>	
+		<h4>subtitle</h4>
+		<div>
+			<h3>
+				<span>
+					<a>span</a>
+					<span>here is a name: {{name}}</span>
+				</span>
+			</h3>	
+		</div>
+		<input data-bind="name">
+		<input data-bind="name" value="{{name}}">
+		<button class="change_name">change name</button>
+	</div>
+	
+	<div class="output">
+		<h3>OUTPUT</h3>
+	</div>
+	
+	<hr>
+	
+	<h3 data-value="p"></h3>
+	<h3 data-value="p"></h3>
+	<h3 data-value="p"></h3>
+	<input data-value="p">
+	<button class="change_number">change number</button>
+	
+	<hr>
 
 
 	<span data-foreach="todos">
@@ -60,19 +92,7 @@
 		</div>
 	</div>
 	
-	<hr>
-	
-	
-	<h3 data-value="name"></h3>	
-	<input data-value="name">
-	<input data-value="name">
-	<button class="change_name">change name</button>
-	
-	<h3 data-value="p"></h3>
-	<h3 data-value="p"></h3>
-	<h3 data-value="p"></h3>
-	<input data-value="p">
-	<button class="change_number">change number</button>
+
 
 	
 
