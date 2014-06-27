@@ -18,7 +18,7 @@
 	
 	
 	<div class="test">
-		<h3>{{name}}!!!</h3>	
+		<h3>{{name}}!!!</h3>
 		<h4>subtitle</h4>
 		<div>
 			<h3>
@@ -29,12 +29,15 @@
 			</h3>	
 		</div>
 		<input data-bind="name">
-		<input data-bind="name" value="{{name}}">
+		<input data-bind="name">
 		<button class="change_name">change name</button>
+		
+		<h4>{{date}}</h4>
+		<input data-bind="date" placeholder="enter date here">
 	</div>
 	
 	<div class="output">
-		<h3>OUTPUT</h3>
+		<h6>OUTPUT</h6>
 	</div>
 	
 	<hr>

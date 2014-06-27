@@ -1,6 +1,7 @@
 TODO
 -------------------------------------------------------
 - handlebar {{ varname }} notation
+	- including being able to use it in element attributes (eg. class="is-saved-{{saved}}");
 - use an array of jQuery objects for data set loops INSTEAD of reloading all foreach container elements
 	model = $(this).html().clone();
 	// create new clones of model and save these new jQuery objects to an array (model_copies)
